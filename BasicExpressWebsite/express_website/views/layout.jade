@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title #{title}: Express Website
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body#page-top(data-spy='scroll', data-target='.navbar-fixed-top')
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Toggle navigation              
+            span.icon-bar         
+            span.icon-bar                    
+            span.icon-bar     
+          a.navbar-brand.page-scroll(href='#page-top') Express Website
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          ul.nav.navbar-nav.navbar-right              
+            li(class=(title==='Home' ? 'active' : ''))
+              a.page-scroll(href='/') Home                  
+            li(class=(title==='About' ? 'active' : ''))
+              a.page-scroll(href='/about') About Us                   
+            li(class=(title==='Contact' ? 'active' : ''))
+              a.page-scroll(href='/contact') Contact
+
+    block content
+    footer
+        p &copy; 2015, All Rights Reserved
+
+    script(src='http://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+    script(src='javascripts/bootstrap.min.js')
+
+

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	h1 Register
+	p Please register using the form below
+	form(method='post', action='register',enctype='multipart/form-data')
+		.form-group
+			lable Name
+			input.form-control(name='name', type='text', placeholder='Enter Name')
+		.form-group
+			lable Email
+			input.form-control(name='email', type='email', placeholder='Enter Email')
+		.form-group
+			lable UserName
+			input.form-control(name='username', type='text', placeholder='Enter user name')
+		.form-group
+			lable Password
+			input.form-control(name='password', type='password', placeholder='Enter password')
+		.form-group
+			lable Confirm Password
+			input.form-control(name='password2', type='password', placeholder='Confirm password')
+		.form-group
+			lable Profile Image
+			input.form-control(name='profileimage', type='file')
+		input.btn.btn-default(name='submit',type='submit',value='Register')

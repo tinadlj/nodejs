@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1 Log In
+	p Please Log in using the form below
+	form(method='post', action='login')
+		.form-group
+			lable UserName
+			input.form-control(name='username', type='text')
+		.form-group
+			lable Password
+			input.form-control(name='password', type='password')
+		button.btn.btn-default(type='submit') Login
